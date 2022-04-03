@@ -1,0 +1,25 @@
+<div id="bookItem">
+  <div id="leftSide">
+    <img id="bookImage" [src]="image" />
+  </div>
+  <div id="rightSide">
+    <h5 id="title">{{title}}</h5>
+    <div id="titleUnderline"></div>
+    <small id="subtitle">{{subtitle}}</small>
+    <div id="bookChapters">
+        <div *ngFor="let chapter of chapterList" class="bookChapter">
+            <h6 class="chapterTitle">{{chapter.title}}</h6>
+            <p class="chapterText">{{chapter.text}}</p>
+        </div>
+    </div>
+    <p id="moreInformation">
+      {{price}}<br />
+      {{isbn}}
+    </p>
+    <a [href]="href" target="_blank">
+      <div id="buyButton">
+        <p id="buyButtonText">Online erwerben</p>
+      </div></a
+    >
+  </div>
+</div>

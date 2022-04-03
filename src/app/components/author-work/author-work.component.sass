@@ -1,0 +1,171 @@
+@import "/src/styles"
+#navigationContainer
+    position: fixed
+    top: 64px
+    left: 0
+    width: 100%
+    z-index: 9
+main
+    margin-top: 64px
+    background-color: white
+    .topicSection
+        padding-top: 8px
+    .singleTextHeadingContainer
+        margin-bottom: 12px
+        .singleTextHeading
+            font-weight: 600
+            padding: 0
+            margin: 0
+            padding-bottom: 2px
+        .headingUnderline
+            background-color: $black800
+            height: 2px
+            width: 64px
+        .singleTextSubheading
+            font-style: italic
+            font-weight: 400
+            display: block
+            padding-top: 10px
+            padding-bottom: 8px
+    #hoerbuecher
+        #audioBooksContainer
+            display: grid
+            justify-content: center
+            #audioBookList
+                width: 700px
+                display: grid
+                grid-template-columns: repeat( 2 , 1fr )
+                row-gap: 64px
+                .audioBookContainer
+                    justify-self: flex-start
+                    &:nth-of-type(even)
+                        justify-self: flex-end
+                    .audioProbeButton
+                        display: grid
+                        grid-template-columns: 32px max-content
+                        background-color: $black800
+                        align-items: center
+                        align-content: center
+                        padding: 8px 16px
+                        padding-left: 12px
+                        column-gap: 4px
+                        border-radius: 4px
+                        width: max-content
+                        cursor: pointer
+                        .audioProbeText
+                            font-family: $heading-font
+                            font-size: 14px
+                            font-weight: 500
+                            color: white
+                .singleTextHeadingContainer
+                    margin-bottom: 8px
+                    .singleTextSubheading
+                        font-size: 12px
+                    .headingUnderline
+                        width: 100px
+
+    #diverse_verse
+        display: grid
+        justify-content: stretch
+        .singleTextContainer
+            position: relative
+            z-index: 1
+            padding-left: calc(50% - 225px)
+            .singleText
+                padding-right: 16px
+    #starke_stuecke, #story
+        display: grid
+        justify-content: stretch
+        .singleTextContainer
+            justify-content: center
+            padding-left: 16px
+            padding-right: 16px
+            box-sizing: border-box
+            display: grid
+            .singleTextContent
+                max-width: 700px
+                .singleText
+                    line-height: 1.5
+                    .indentedSection
+                        display: block
+                        padding-left: 32px
+                        box-sizing: border-box
+    .singleTextContainer
+        display: grid
+        padding-bottom: 64px
+        &:not(:first-of-type)
+            padding-top: 64px
+        &:nth-child(odd)
+            background-color: $gray200
+        
+        .imageToTextContainer
+            padding: 8px 0
+            padding-top: 32px
+            display: flex
+            flex-wrap: wrap
+            row-gap: 16px
+            column-gap: 16px
+            .imageToText
+                height: 128px
+                border-radius: 4px
+            .imageSubtitle
+                font-style: italic
+                display: block
+                font-size: 12px
+        .singleText
+            line-height: 1.7
+            .indentedSection
+                display: block
+                padding-left: 32px
+@media only screen and (max-width: 950px )
+    main
+        #diverse_verse
+            .singleTextContainer
+                .singleText
+                    font-size: 13px
+        #hoerbuecher
+            #audioBooksContainer
+                #audioBookList
+                    width: 600px
+                    grid-template-columns: repeat( 2 , 1fr )
+@media only screen and (max-width: 750px )
+    main
+        #diverse_verse
+            .singleTextContainer
+                padding-left: 100px
+                .singleText
+        #hoerbuecher
+            #audioBooksContainer
+                padding-left: 64px
+                box-sizing: border-box
+                justify-content: stretch
+                #audioBookList
+                    width: max-content
+                    display: grid
+                    justify-content: stretch
+                    grid-template-columns: 1fr
+                .audioBookContainer
+                        justify-self: flex-start !important
+        #starke_stuecke, #story
+            .singleTextContainer
+                padding-left: 64px
+                padding-right: 64px
+                box-sizing: border-box
+                .singleTextContent
+                    .singleText
+                        .indentedSection
+@media only screen and (max-width: 600px )
+    main   
+        #diverse_verse
+            display: grid
+            justify-content: stretch
+            .singleTextContainer
+                position: relative
+                z-index: 1
+                padding-left: 64px
+@media only screen and (max-width: 500px )
+    main
+        #diverse_verse
+            .singleTextContainer
+                padding-left: 32px
+                .singleText

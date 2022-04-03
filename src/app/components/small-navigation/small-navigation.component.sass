@@ -1,0 +1,36 @@
+@import "/src/styles"
+#navigation
+    background-color: $gray200
+    display: grid
+    justify-content: center
+    justify-items: center
+    align-content: center
+    grid-template-columns: repeat( 4 , 200px)
+    overflow-x: auto
+    height: 64px
+    position: relative
+    border-bottom: 2px solid $black800
+    .navigationItem
+        padding: 5px 0
+        cursor: pointer
+        p
+            font-family: $heading-font
+            font-size: 16px
+            font-weight: 500
+    
+    .markContainer
+        grid-column: 1 / 5
+        justify-self: stretch
+        display: grid
+        justify-items: stretch
+        width: 100%
+        .mark
+            width: 64px
+            background-color: $black800
+            height: 2px
+            position: absolute
+@media only screen and (max-width: 1000px)
+    #navigation
+        justify-content: flex-start
+        justify-items: center
+        grid-template-columns: repeat( 4 , 200px)

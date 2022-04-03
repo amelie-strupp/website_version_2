@@ -1,0 +1,17 @@
+<div id="topNavigationContainer">
+  <div id="nameHandwritingLeft" (click)="navigate(0)">
+    <h4 class="handwritingLeft"><span id="firstName"  class="handwritingLeft">Dietrich </span>Neuhaus</h4>
+  </div>
+  <nav id="topNavigation">
+    <div id="topNavigationItems">
+    <div class="topNavigationItem"
+    (click)="navigate(i)"
+    *ngFor="let item of items; let i = index"><p>{{item.text}}</p></div>
+  </div>
+    <div id="markContainer">
+      <div id="mark"
+      [style.left]="getMarkPosition()+'px'"
+      [@topMarkPositionAnimation]="{value: markPosition, params : { oldOffset: oldMarkPosition, newOffset: markPosition}}"></div>
+    </div>
+  </nav>
+</div>

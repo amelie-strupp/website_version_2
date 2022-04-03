@@ -1,0 +1,71 @@
+@import "/src/styles"
+#topNavigationContainer
+    display: grid
+    background-color: white
+    width: 100vw
+    justify-content: center
+    border-radius: 0 0 8px 8px
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 12px
+    position: relative
+    align-items: center
+    align-content: center
+    grid-template-columns: max-content 1fr
+    height: 64px
+    #nameHandwritingLeft
+        padding-left: 32px
+        padding-right: 32px
+        box-sizing: border-box
+        cursor: pointer
+        .handwritingLeft
+            font-family: 'Monsieur La Doulaise'
+            font-size: 24px
+            margin: 0
+            padding: 0
+            font-weight: 500
+    #topNavigation
+        padding-right: 16px
+        height: 64px
+        position: relative
+        #topNavigationItems
+            height: 64px
+            display: grid
+            justify-self: flex-end
+            justify-content: flex-end
+            justify-items: center
+            align-content: center
+            grid-template-columns: repeat( 5 , minmax(80px, max-content))
+            .topNavigationItem
+                cursor: pointer
+                padding: 0 24px
+                box-sizing: border-box
+                p
+                    font-family: $heading-font
+                    font-size: 18px
+                    font-weight: 500
+        
+        #markContainer
+            position: relative
+            top: -18px
+            #mark
+                width: 64px
+                background-color: $black800
+                height: 2px
+                position: absolute
+@media only screen and (max-width: 900px)
+    #topNavigationContainer
+        grid-template-columns: max-content 1fr
+        #nameHandwritingLeft
+        #topNavigation
+            .navigationItem
+                p
+                    font-size: 16px
+
+@media only screen and (max-width: 820px)
+    #topNavigationContainer
+        #topNavigation
+            #topNavigationItems
+                width: 600px
+                grid-template-columns: repeat( 5 , minmax(60px, max-content))
+            .navigationItem
+                p
+                    font-size: 16px

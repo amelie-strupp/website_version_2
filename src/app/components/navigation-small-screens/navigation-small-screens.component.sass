@@ -1,0 +1,102 @@
+@import "/src/styles"
+#navigationContainer
+    display: grid
+    background-color: white
+    width: 100vw
+    justify-content: stretch
+    align-content: center
+    align-items: center
+    border-radius: 0 0 8px 8px
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 12px
+    position: relative
+    z-index: 10
+    #nameHandwritingLeft
+        position: absolute
+        left: 32px
+        font-family: 'Monsieur La Doulaise'
+        font-size: 24px
+        top: -16px
+    #nameHandwritingCenter
+        display: none
+    #navigationBar
+        width: 100%
+        display: grid
+        justify-content: center
+        padding: 0 64px
+        justify-items: center
+        box-sizing: border-box
+        align-content: center
+        align-items: center
+        height: 64px
+        #openMoreButton
+            position: absolute
+            display: grid
+            align-content: center
+            right: 28px
+            top: 8px
+            cursor: pointer
+            background-color: $gray200
+            padding: 12px
+            border-radius: 50%
+        #smallNavigationHeading, #nameHandwritingCenter
+            font-family: $heading-font
+            font-size: 20px
+            font-weight: 600
+            cursor: pointer
+    #navigationItemsContainer
+        height: max-content
+        overflow: hidden
+        box-sizing: border-box
+        padding: 0 28px
+        #itemList
+            list-style-type: upper-roman
+            box-sizing: border-box
+            margin: 0
+            border-top: 1px solid $black800
+            padding: 24px 0
+            padding-bottom: 32px
+            li
+                padding: 8px 32px
+                font-family: $heading-font
+                border-radius: 4x
+                font-size: 16px
+                font-weight: 500
+                cursor: pointer
+                list-style-position: inside
+                &:nth-of-type(even)
+                    background-color: $gray200
+                &.selectedItem
+                    font-weight: 800
+#overlay
+    height: 100vh
+    width: 100vw
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 9
+    background-color: $black800
+    opacity: 0.1
+@media only screen and (max-width: 600px)
+    #navigationContainer
+        #nameHandwritingLeft
+            display: none
+        #nameHandwritingCenter
+            display: inline-block
+@media only screen and (max-width: 550px)
+    #navigationContainer
+        #navigationBar
+            justify-self: flex-start
+            justify-items: flex-start
+            justify-content: flex-start
+            padding: 0 32px
+            #smallNavigationHeading, #nameHandwritingCenter
+                font-size: 18px
+@media only screen and (max-width: 400px)
+    #navigationContainer
+        #navigationBar
+            justify-self: flex-start
+            justify-items: flex-start
+            justify-content: flex-start
+            padding: 0 12px
+            #smallNavigationHeading, #nameHandwritingCenter
+                font-size: 16px
