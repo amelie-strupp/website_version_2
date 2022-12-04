@@ -9,14 +9,19 @@
     <div id="bookChapters">
         <div *ngFor="let chapter of chapterList" class="bookChapter">
             <h6 class="chapterTitle">{{chapter.title}}</h6>
-            <p class="chapterText">{{chapter.text}}</p>
+            <p class="chapterText" *ngIf="chapter.subchapters == undefined">{{chapter.text}}</p>
+            <div *ngIf="chapter.subchapters != undefined">
+            <div *ngFor="let subchapter of chapter.subchapters">
+            <p class="chapterText subchapterText">{{subchapter}}</p>
+            </div>
+            </div>
         </div>
     </div>
     <p id="moreInformation">
       {{price}}<br />
       {{isbn}}
     </p>
-    <a [href]="href" target="_blank">
+    <a [href]="href">
       <div id="buyButton">
         <p id="buyButtonText" *ngIf="!buyOverContactPage">Online erwerben</p>
         <p id="buyButtonText" *ngIf="buyOverContactPage">Bezug über Kontakt</p>

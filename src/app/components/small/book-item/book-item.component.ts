@@ -2,7 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 interface Chapter{
   title: string;
-  text: string;
+  text?: string;
+  subchapters?: Array<string>
 }
 @Component({
   selector: 'app-book-item',

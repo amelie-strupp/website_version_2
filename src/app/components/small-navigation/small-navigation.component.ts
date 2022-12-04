@@ -56,9 +56,7 @@ export class SmallNavigationComponent implements OnInit {
 
   navigate(index: number) {
     this.selectedIndex = index;
-    this.router.navigate([], {
-      fragment: this.navigationItems[index].link,
-      relativeTo: this.route,
+    this.router.navigate([this.navigationItems[index].link], {
     });
     this.moveMark(index);
   }
@@ -84,55 +82,22 @@ export class SmallNavigationComponent implements OnInit {
     });
   }
   minimumOffset = 0;
-  @HostListener('window:scroll', ['$event']) // for window scroll events
-  onScroll(event: any) {
-    let elements = Array.from(document.getElementsByClassName('anchorElement'));
-    let bestMatchingOffset = elements[0].getBoundingClientRect().top;
-    let anchor = elements[0].getAttribute('data-anchor');
-    for(let element of elements) {
-      let br = element.getBoundingClientRect();
-      if(bestMatchingOffset <= 0 && br.top <= 200 && br.top >= bestMatchingOffset){
-        bestMatchingOffset = br.top;
-        anchor = element.getAttribute('data-anchor');
-        this.lastElement = anchor ?? '';
+  ngAfterViewInit(): void {
+    const url = this.router.url;
+    for (let itemIndex in this.navigationItems) {
+      const rootUrl = url.split('/')[2];
+      console.log(rootUrl)
+      if (rootUrl == this.navigationItems[itemIndex].link.split('/')[2]) {
+        this.selectedIndex = parseInt(itemIndex);
+        this.moveMarkToAnchor(this.navigationItems[itemIndex].link);
+            this.cdref.detectChanges();
+        break;
       }
     }
-    
-    setTimeout(() => {
-              this.moveMarkToAnchor(this.lastElement);
-          }, 600);
-  }
-  ngAfterViewInit(): void {
-    // let elements = document.getElementsByClassName('anchorElement');
-    // const currentNavigationObserver = new IntersectionObserver ( (entries, observer) => {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       let d = entry.target.getAttribute('data-anchor');
-    //       setTimeout(() => {
-    //         this.moveMarkToAnchor(this.lastElement);
-    //     }, 500);
-    //       let data = entry.target.getAttribute('data-anchor');
-    //       this.lastElement = data ?? '';
-    //     }
-    //   });
-    // });
-    
-    // Array.from(elements).forEach( function (element) {
-    //   currentNavigationObserver.observe(element);
-    // });
-
-
-
-
-    this.router.navigate([], {
-      fragment: this.route.snapshot.fragment ?? '',
-      relativeTo: this.route,
-    });
-    if (this.markPosition == 0) {
-      console.log('Called');
-      this.moveMark(0);
-      this.oldMarkPosition = this.markPosition;
-      this.cdref.detectChanges();
-    }
+    // if (this.markPosition == 0) {
+    //   this.moveMark(0);
+    //   this.oldMarkPosition = this.markPosition;
+    //   this.cdref.detectChanges();
+    // }
   }
 }

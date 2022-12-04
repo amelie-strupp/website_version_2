@@ -1,0 +1,400 @@
+<main id="shopContainer">
+    <div class="typeContainer anchorElement" id="buecher" data-anchor="buecher">
+      <!--Bücher-->
+      <app-page-headline>Bücher</app-page-headline>
+      <section id="booksContainer">
+        <app-book-item
+          title="„Vorsicht: Gedichte!“"
+          subtitle="Verse aus acht Jahrzehnten"
+          price="228 Seiten, Euro 13,80"
+          isbn="ISBN 3-8334-1641-6"
+          href="https://www.amazon.de/exec/obidos/ASIN/3833416416/qid=1111780067/302-0144177-4704002"
+          image="assets/books/vorsichtgedichte_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Schwarzrosa Prosa“"
+          subtitle="Zwei Dutzend Kurzgeschichten"
+          price="176 Seiten, Euro 11,80"
+          isbn="ISBN 3-8334-1008-6"
+          href="https://www.amazon.de/exec/obidos/ASIN/3833410086/qid=1111779876/302-0144177-4704002"
+          image="assets/books/schwarzrosaprosa_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 1"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="208 Seiten, Euro 13,80"
+          isbn="ISBN 3-8334-2266-1"
+          href="https://www.amazon.de/exec/obidos/ASIN/3833422661/qid=1111780134/302-0144177-4704002"
+          image="assets/books/stueckarbeit_buch1_000.jpg"
+          [chapterList]="[
+            {
+              title: 'Eine Million fällt vom Himmel',
+              text: 'Szenen und Songs um Liebe, Geld und Zufall'
+            },
+            { title: 'Fluchten', text: 'ein Spiel mit drei Seelen' },
+            {
+              title: 'Ein weites Land',
+              text: 'Hörspiel, frei nach Arthur Schnitzlers „Das weite Land“'
+            }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 2"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="208 Seiten, Euro 13,80"
+          isbn="ISBN 3-8334-3239-X"
+          href="https://www.amazon.de/gp/product/383343239X/302-3900411-9101646?v=glance&n=299956"
+          image="assets/books/stuek_arbeit_2_000.jpg"
+          [chapterList]="[
+            {
+              title: 'Die Insel des Zauberers',
+              text: 'ein Magical, frei nach Shakespeares Schauspiel „Der Sturm“'
+            },
+            { title: 'Die Freizeit-A.G.', text: 'eine aktuelle Utopie' },
+            {
+              title: 'Der gute Nathan',
+              text: 'Hörspiel, eine Variation über Lessings  „Nathan der Weise“'
+            }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 3"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="224 Seiten, Euro 13,80"
+          isbn="ISBN 3-8334-4790-7"
+          href="http://www.amazon.de/ST%C3%9CCK-ARBEIT-Buch-3-B%C3%BChnen-H%C3%B6rspieltexte/dp/3833447907/ref=sr_1_4?ie=UTF8&s=books&qid=1204882738&sr=1-4"
+          image="assets/books/stueck_arbeit_3_000.jpg"
+          [chapterList]="[
+            { title: 'Schall und Rauch', text: 'ein literarisches Rollenspiel' },
+            {
+              title: 'Dreikönigsnacht',
+              text: ' venezianisches Maskenspiel, frei nach Shakespeares „Was ihr wollt“'
+            },
+            { title: 'Der Porzellanladen', text: 'ein Stück Familiengeschichte' },
+            { title: 'All Blues - ein Jazzical', text: 'Audioplay' }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 4"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="212 Seiten, Euro 13,80"
+          isbn="ISBN 978-3-8334-9567-0"
+          href="http://www.amazon.de/ST%C3%9CCK-ARBEIT-Buch-4-B%C3%BChnen-H%C3%B6rspieltexte/dp/3833495677/ref=sr_1_15?ie=UTF8&s=books&qid=1204882763&sr=1-15"
+          image="assets/books/stueckarbeit4_000.jpg"
+          [chapterList]="[
+            {
+              title: 'Eine Bombenparty',
+              text: 'Schwarze Komödie nach einem Roman von Graham Greene'
+            },
+            {
+              title: 'Der Kaufmann von London',
+              text: 'nach Shakespeares Komödie \'Der Kaufmann von Venedig\''
+            },
+            { title: 'Ein Puppenspieler', text: 'Funkerzählung' }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 5"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="248 Seiten, Euro 13,80 "
+          isbn="ISBN 978-3839-137765"
+          href="http://www.amazon.de/ST%C3%9CCK-ARBEIT-Buch-5-B%C3%BChnen--H%C3%B6rspieltexte/dp/3839137764/ref=sr_1_1?ie=UTF8&qid=1318757378&sr=8-1"
+          image="assets/books/stueckarbeit5.jpg"
+          [chapterList]="[
+            { title: 'Pygmalion zweitausendund - ', text: 'utopische Komödie.' },
+            { title: 'Zwischen den Fronten', text: 'Einakter' },
+            {
+              title: 'Prokura vom lieben Gott',
+              text: ' Hommage an Peter Paul Althaus.'
+            },
+            { title: 'Macbeth nach Shakespeare', text: 'Hörspiel.' }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„STÜCK-ARBEIT“ Buch 6"
+          subtitle="Bühnen- und Hörspieltexte"
+          price="284 Seiten, Euro 16,80 "
+          isbn="ISBN 978-3732286294"
+          href="http://www.amazon.de/Willkommen-Greisenpalast-Berichte-Leben-Siebzig/dp/3848222019/ref=sr_1_1?ie=UTF8&qid=1352494831&sr=8-1"
+          image="assets/books/stueck_arbeit_6_000.jpg"
+          [chapterList]="[
+            { title: 'Strafprozess gegen S.', text: 'Hörspiel' },
+            { title: 'Nur ein Verdacht', text: 'Einakter' },
+            { title: 'Tischgespräche', text: 'Fünf Dramolette' },
+            { title: 'Das Gastspiel', text: 'Ein Stück Theater' }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Erzähl doch keine Geschichten“"
+          subtitle="33 Geschichten"
+          price="252 Seiten, Euro 14,80"
+          isbn="ISBN 978-3-8334-7030-1"
+          href="http://www.amazon.de/Erz%C3%A4hl-doch-keine-Geschichten-33/dp/3833470305/ref=sr_1_14?ie=UTF8&s=books&qid=1204882763&sr=1-14"
+          image="assets/books/keine-geschichten_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Der andere Adam“"
+          subtitle="Filmnovelle"
+          price="176 Seiten, Euro 12,80 "
+          isbn="ISBN 978-3-8370-1028-2"
+          href="http://www.amazon.de/andere-Adam-Filmnovelle-Dietrich-Neuhaus/dp/3837010287/ref=sr_1_6?ie=UTF8&s=books&qid=1204882738&sr=1-6"
+          image="assets/books/der-andere-adam_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Nicht ohne meine Katzen“"
+          subtitle="Prosa, Verse, Fotos "
+          price="148 Seiten, 16 Abbildungen, Euro 12,80 "
+          isbn="ISBN 978-3-8370-2938-3"
+          href="http://www.amazon.de/Nicht-ohne-meine-Katzen-Prosa/dp/3837029387/ref=sr_1_1?s=books&ie=UTF8&qid=1352375640&sr=1-1"
+          image="assets/books/nicht_ohne_katzen_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Der Gedankendieb“"
+          subtitle="Roman"
+          price="328 Seiten, Euro 26,80"
+          isbn="ISBN 978-3837-098228"
+          href="http://www.amazon.de/Der-Gedankendieb-Roman-Dietrich-Neuhaus/dp/3837098222/ref=sr_1_1?ie=UTF8&qid=1352376841&sr=8-1"
+          image="assets/books/gedankendieb.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Mit anderen Worten“"
+          subtitle="Übertragungen, Nachdichtungen - Eine Anthologie "
+          price="156 Seiten, 9 Abbildungen, Euro 18,80 "
+          isbn="ISBN 978-3839-141700"
+          href="http://www.amazon.de/s/ref=nb_sb_noss/275-7898211-8507202?__mk_de_DE=MZ&url=search-alias=stripbooks&field-keywords=Dietrich+Neuhaus+mit+anderen"
+          image="assets/books/mitanderenworten.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Shakespeares dunkle Jahre“"
+          subtitle="Fakten und Fiktionen -  Eine kreative Chronik von 1579 bis 1593"
+          price="284 Seiten, viele Abbildungen, Euro 26,80 "
+          isbn="ISBN 978-3839164495"
+          href="http://www.amazon.de/s/ref=nb_sb_noss?__mk_de_DE=MZ&url=search-alias=stripbooks&field-keywords=Dietrich+Neuhaus+shakespeare"
+          image="assets/books/sdjaussenok.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Wir weigern uns Feinde zu sein“"
+          subtitle="Eine zeitkritische Erzählung"
+          price="172 Seiten, Euro 18,80"
+          isbn="ISBN 978-3842318540"
+          href="http://www.amazon.de/s/ref=nb_sb_noss?__mk_de_DE=MZ&url=search-alias=stripbooks&field-keywords=Dietrich+Neuhaus+Wir+weigern+uns"
+          image="assets/books/wwu_aussen_ok.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Der Sohn des Buckelapothekers“"
+          subtitle="Historischer Roman"
+          price="148 Seiten, Euro 16,80"
+          isbn="ISBN 978-3842319028"
+          href="http://www.amazon.de/Buckelapothekers-Schiller-Goethe-Weimarer-Klassik/dp/3848214504/ref=sr_1_2?s=books&ie=UTF8&qid=1352495547&sr=1-2"
+          image="assets/books/buckel_ok_000.jpg"
+          [chapterList]="[
+            {
+              title: '',
+              text: 'Friedrich Schiller in den Erinnerungen seines treuen Dieners, Sekretärs und Vertrauten Georg Gottfried Rudolph'
+            }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Alles muss raus“"
+          subtitle="Noch mehr Geschichten "
+          price="252 Seiten, Euro 14,80"
+          isbn="ISBN 978-3842360105"
+          href="http://www.amazon.de/Geschichten-Menschenversteher-Zeitzeichen-Zeitreise-Heimkehr/dp/384236010X/ref=sr_1_1?s=books&ie=UTF8&qid=1318757644&sr=1-1"
+          image="assets/books/alles-muss-raus.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Das Dorf der dichtenden Katzen“"
+          subtitle="Gedachte Gedichte"
+          price="60 Seiten mit vielen Fotos, Euro 22,80"
+          isbn="ISBN 978-3844806588"
+          href="http://www.amazon.de/Das-Dorf-dichtenden-Katzen-Gedachte/dp/384480658X/ref=sr_1_1?s=books&ie=UTF8&qid=1352495034&sr=1-11"
+          image="assets/books/dichtende-katzen_000.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Willkommen im Greisenpalast “"
+          subtitle="Berichte vom Leben ab siebzig "
+          price="348 Seiten, Euro 29,80"
+          isbn="ISBN 978-3848222018"
+          href="http://www.amazon.de/Willkommen-Greisenpalast-Berichte-Leben-Siebzig/dp/3848222019/ref=sr_1_1?ie=UTF8&qid=1352494831&sr=8-1"
+          image="assets/books/greisenpalast.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Fannie Fantastisch“"
+          subtitle="Eine Katzen-Suite in fünf Sätzen plus Prélude und Coda"
+          price="100 Seiten in Farbe mit vielen Fotos, Euro 29,80"
+          isbn="ISBN 978-3732257324"
+          href="http://www.amazon.de/Das-Dorf-dichtenden-Katzen-Gedachte/dp/384480658X/ref=sr_1_1?s=books&ie=UTF8&qid=1352495034&sr=1-1"
+          image="assets/books/fanniefantastisch.jpg"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Von Magiern, Mimen und Meistern“"
+          subtitle="Sechserlei Lektüren"
+          price="272 Seiten, Euro 29,80"
+          isbn="ISBN 978-3732281985"
+          href="http://www.amazon.de/Willkommen-Greisenpalast-Berichte-Leben-Siebzig/dp/3848222019/ref=sr_1_1?ie=UTF8&qid=1352494831&sr=8-1"
+          image="assets/books/magiern_mimen_meistern.jpg"
+          [chapterList]="[
+            { title: 'Das Meeting der Magier', text: 'Eine kleine Novelle' },
+            { title: 'Das Schädeltrauma von Weimar', text: 'Ein Bericht' },
+            { title: 'Theater frei Haus', text: 'Eine Reminiszenz' },
+            {
+              title: 'Gustav Vigeland: Als Bildhauer zur Welt gekommen',
+              text: 'Fast eine Autobiografie'
+            },
+            {
+              title: 'Die Flucht einer Mutter im Jahre 1564',
+              text: 'Eine Historie'
+            },
+            { title: 'Lyrik in Lappland', text: 'Ein Reiseerlebnis' }
+          ]"
+        ></app-book-item>
+  
+        <app-book-item
+          title="„Mein Shakespeare“"
+          subtitle="Sechs Werke des Meisters in freier Interpretation und Übertragung"
+          price="492 Seiten, Euro 39,80"
+          isbn="ISBN 978-3732290864"
+          href="http://www.amazon.de/Das-Dorf-dichtenden-Katzen-Gedachte/dp/384480658X/ref=sr_1_1?s=books&ie=UTF8&qid=1352495034&sr=1-1"
+          image="assets/books/mein_shakespeare.jpg"
+          [chapterList]="[
+            {
+              title: 'Die Insel des Zauberers',
+              text: 'Libretto für ein Magical, frei nach dem Spätwerk The Tempest'
+            },
+            {
+              title: 'Dreikönigsnacht',
+              text: 'Venezianisches Maskenspiel, frei nach der Komödie Twelfth Night'
+            },
+            {
+              title: 'Der Kaufmann von London oder Recht vor Gnade',
+              text: 'Wie der Merchant of Venice wohl eigentlich gemeint war'
+            },
+            {
+              title: 'Gut ist bös und bös ist gut',
+              text: 'Eine frei gestaltete Macbeth-Variante'
+            },
+            {
+              title: 'Hamlet 1947',
+              text: 'Fiktive Dokumentation über ein Theater-Experiment'
+            },
+            {
+              title: 'Sommernachtsträume',
+              text: 'Ein Pärchen-Märchen frei nach A Midsummer Night\'s Dream'
+            },
+            { title: '', text: 'und eine Zugabe' }
+          ]"
+        ></app-book-item>
+  
+  
+        <app-book-item
+        title="„Mein vorläufiger Nachlass“ Buch 1"
+        subtitle="Prosatexte und Verse"
+        price="253 Seiten, Euro 18"
+        [buyOverContactPage]="true"
+        href="./contact"
+        image="assets/books/nachlass_1.jpg"
+        [chapterList]="[
+          {
+            title: 'Portugiesische Reise',
+            text: 'Zwei Wochen im ewigen Frühling'
+          },
+          {
+            title: 'Ercan Turan und seine vier Leben',
+            text: 'Erzählung nach einer Idee von Ulrich Erckenbrecht'
+          },
+          {
+            title: 'Drei Short-Stories',
+            subchapters:[
+                'Mausis Tagebuch',
+                'Leise rieselt ...',
+                'Spätes Wiedersehen'
+            ]
+          },
+          {
+            title: 'Aktuelles aus der Shakespeare-Zeit',
+            subchapters:[
+                '1603: Die große Plage',
+                'Der Magus der Königin',
+                'Das große O aus Holz',
+                'Die Verheiratung der Prinzessin Anna von Dänemark mit König Jacob VI, Sohn der Maria Stuart'
+            ]
+          },
+          {
+            title: 'Von der Kunst des Übersetzens',
+            text: 'Ein Versuch über Versuche'
+          },
+          {
+            title: '42 Shakespeare-Sonette',
+            text: 'Zweisprachig'
+          },
+        ]"
+      ></app-book-item>
+
+      <app-book-item
+      title="„Mein vorläufiger Nachlass“ Buch 2"
+      subtitle="Szenische Texte"
+      price="362 Seiten, Euro 18"
+      [buyOverContactPage]="true"
+      href="./contact"
+      image="assets/books/nachlass_2.jpg"
+      [chapterList]="[
+        {
+          title: 'Karriere',
+          text: 'Eine traurige Komödie'
+        },
+        {
+          title: 'Stephanies Zeit-Reisen',
+          text: 'Eine Bühnen- und Filmerzählung nach dem Roman „Stephanie und das vorige Leben“ von Herbert Rosendorfer'
+        },
+        {
+            title: 'Zweite Geige, erstes Pult',
+            text: 'Kammerschauspiel nach der Erzählung „Der Andere“ von Bernhard Schlink'
+          },
+        {
+          title: 'Vier Radio-Sketche',
+          subchapters:[
+              'Entscheiden tut weh',
+              'Reue = Schläue',
+              'Ein Traum von einem Bad',
+              'Casting Session',
+          ]
+        },
+        {
+            title: 'Träumerei, aber nicht von Schumann',
+            text: 'Sketch'
+          },
+          {
+            title: 'Sechster Akt',
+            text: 'Nachspiel zu „Don Juan oder Die Liebe zur Geometrie“ von Max Frisch'
+          },
+          {
+            title: 'König Lear, der unbeherrschte Herrscher',
+            text: 'Nach der Tragödie „King Lear“ von William Shakespeare'
+          },
+       
+      ]"
+    ></app-book-item>
+
+      </section>
+    </div>
+    </main>

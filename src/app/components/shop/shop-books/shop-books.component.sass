@@ -1,0 +1,58 @@
+@import "/src/styles"
+#navigationContainer
+    position: fixed
+    top: 64px
+    left: 0
+    width: 100%
+    z-index: 9
+
+#shopContainer
+    margin-top: 64px
+    padding-bottom: 64px
+    background-color: $gray100
+    display: grid
+    justify-content: stretch
+    .typeContainer
+        padding-top: 8px
+        display: grid
+        justify-content: center
+    #booksContainer, #audioBooksContainer
+        display: grid
+        grid-template-columns: repeat(2, 500px)
+        padding-bottom: 64px
+        row-gap: 80px
+        column-gap: 50px
+        justify-items: flex-start
+        box-sizing: border-box
+    
+@media only screen and (max-width: 1200px)
+    #shopContainer
+        #booksContainer, #audioBooksContainer
+            grid-template-columns: repeat(2, 400px)
+            column-gap: 60px
+    
+@media only screen and (max-width: 1000px)
+    #shopContainer
+        #booksContainer, #audioBooksContainer
+            grid-template-columns: 1fr
+            column-gap: 0
+            padding-left: 100px
+            padding-right: 100px
+
+@media only screen and (max-width: 600px)
+    #shopContainer
+        #booksContainer, #audioBooksContainer
+            padding-left: 64px
+            padding-right: 64px
+
+@media only screen and (max-width: 500px)
+    #shopContainer
+        #booksContainer, #audioBooksContainer
+            padding-left: 32px
+            padding-right: 32px
+
+@media only screen and (max-width: 400px)
+    #shopContainer
+        #booksContainer, #audioBooksContainer
+            padding-left: 16px
+            padding-right: 16px

@@ -23,6 +23,8 @@ import { ContactPageComponent } from './components/pages/contact-page/contact-pa
 import { AuthorWorkPoemsComponent } from './components/author-work-poems/author-work-poems.component';
 import { AuthorWorkBooksComponent } from './components/author-work-books/author-work-books.component';
 import { AuthorWorkAudioBooksComponent } from './components/author-work-audio-books/author-work-audio-books.component';
+import { ShopBooksComponent } from './components/shop/shop-books/shop-books.component';
+import { ShopAudioBooksComponent } from './components/shop/shop-audio-books/shop-audio-books.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import { AuthorWorkAudioBooksComponent } from './components/author-work-audio-bo
     ContactPageComponent,
     AuthorWorkPoemsComponent,
     AuthorWorkBooksComponent,
-    AuthorWorkAudioBooksComponent
+    AuthorWorkAudioBooksComponent,
+    ShopBooksComponent,
+    ShopAudioBooksComponent
   ],
   imports: [
     BrowserModule,

@@ -36,8 +36,8 @@ export class TopNavigationComponent implements OnInit {
   items = [
     { text: 'Zur Einführung', link: '/home' },
     { text: 'Vita in Versen', link: '/vita' },
-    { text: 'Werk', link: '/work' },
-    { text: 'Shop', link: '/shop' },
+    { text: 'Werk', link: '/work/diverse_verse' },
+    { text: 'Shop', link: '/shop/buecher' },
     { text: 'Kontakt', link: '/contact' },
   ];
   selectedIndex = 0;
@@ -89,7 +89,9 @@ export class TopNavigationComponent implements OnInit {
       this.moveMark(0);
     }
     for (let itemIndex in this.items) {
-      if (url == this.items[itemIndex].link) {
+      const rootUrl = url.split('/')[1].split('/')[0];
+      if (rootUrl == this.items[itemIndex].link.split('/')[1].split('/')[0]) {
+
         this.selectedIndex = parseInt(itemIndex);
         this.moveMark(this.selectedIndex);
         break;

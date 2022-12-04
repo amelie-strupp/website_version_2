@@ -8,18 +8,24 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
 import { ShoppageComponent } from './components/pages/shoppage/shoppage.component';
 import { VitaPageComponent } from './components/pages/vita-page/vita-page.component';
 import { WorkpageComponent } from './components/pages/workpage/workpage.component';
+import { ShopAudioBooksComponent } from './components/shop/shop-audio-books/shop-audio-books.component';
+import { ShopBooksComponent } from './components/shop/shop-books/shop-books.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent, data:{index: 0}},
   {path: 'vita', component: VitaPageComponent, data:{index: 1}},
-  {path: 'work', component: WorkpageComponent, data:{index: 2}, children:[
-    {path: 'audio_books', component: AuthorWorkAudioBooksComponent},
-    {path: 'books', component: AuthorWorkBooksComponent},
-    {path: 'lyrik', component: AuthorWorkPoemsComponent},
+  {path: 'work', component: WorkpageComponent,  data:{index: 2}, children:[
+    {path: 'diverse_verse', component: AuthorWorkPoemsComponent, data:{index: 3}},
+        {path: 'starke_stuecke', component: AuthorWorkBooksComponent, data:{index: 4}},
+
+    {path: 'hoerbuecher', component: AuthorWorkAudioBooksComponent, data:{index: 5}},
+  ]},
+  {path: 'shop', component: ShoppageComponent, data:{index: 6}, children:[
+    {path: 'buecher', component: ShopBooksComponent, data:{index: 7}},
+    {path: 'hoerbuecher', component: ShopAudioBooksComponent, data:{index: 8}},
 
   ]},
-  {path: 'shop', component: ShoppageComponent, data:{index: 3}},
-  {path: 'contact', component: ContactPageComponent, data:{index: 4}},
+  {path: 'contact', component: ContactPageComponent, data:{index: 9}},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
