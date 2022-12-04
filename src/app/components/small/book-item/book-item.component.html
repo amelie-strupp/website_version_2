@@ -18,7 +18,9 @@
     </p>
     <a [href]="href" target="_blank">
       <div id="buyButton">
-        <p id="buyButtonText">Online erwerben</p>
+        <p id="buyButtonText" *ngIf="!buyOverContactPage">Online erwerben</p>
+        <p id="buyButtonText" *ngIf="buyOverContactPage">Bezug über Kontakt</p>
+
       </div></a
     >
   </div>

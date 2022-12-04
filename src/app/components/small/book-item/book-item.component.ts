@@ -17,6 +17,7 @@ export class BookItemComponent implements OnInit {
   @Input() href = "";
   @Input() image = "";
   @Input() chapterList: Array<Chapter> = [];
+  @Input() buyOverContactPage: boolean = false;
 
   constructor() { }
 

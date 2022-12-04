@@ -20,6 +20,9 @@ import { ShoppageComponent } from './components/pages/shoppage/shoppage.componen
 import { NavigationSmallScreensComponent } from './components/navigation-small-screens/navigation-small-screens.component';
 import { VitaPageComponent } from './components/pages/vita-page/vita-page.component';
 import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
+import { AuthorWorkPoemsComponent } from './components/author-work-poems/author-work-poems.component';
+import { AuthorWorkBooksComponent } from './components/author-work-books/author-work-books.component';
+import { AuthorWorkAudioBooksComponent } from './components/author-work-audio-books/author-work-audio-books.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,10 @@ import { ContactPageComponent } from './components/pages/contact-page/contact-pa
     ShoppageComponent,
     NavigationSmallScreensComponent,
     VitaPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    AuthorWorkPoemsComponent,
+    AuthorWorkBooksComponent,
+    AuthorWorkAudioBooksComponent
   ],
   imports: [
     BrowserModule,
