@@ -18,7 +18,7 @@ import { fromEvent, Observable, Subscription } from 'rxjs';
 
 interface NavigationItem {
   text: string;
-  anchor: string;
+  link: string;
 }
 @Component({
   selector: 'app-small-navigation',
@@ -57,7 +57,7 @@ export class SmallNavigationComponent implements OnInit {
   navigate(index: number) {
     this.selectedIndex = index;
     this.router.navigate([], {
-      fragment: this.navigationItems[index].anchor,
+      fragment: this.navigationItems[index].link,
       relativeTo: this.route,
     });
     this.moveMark(index);
@@ -71,7 +71,7 @@ export class SmallNavigationComponent implements OnInit {
   }
   moveMarkToAnchor(anchor: string){
     for(let itemIndex in this.navigationItems){
-      if(this.navigationItems[itemIndex].anchor == anchor){
+      if(this.navigationItems[itemIndex].link == anchor){
         this.selectedIndex = parseInt(itemIndex);
         this.moveMark(this.selectedIndex);
       }
